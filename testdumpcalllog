@@ -1,0 +1,332 @@
+
+=================
+[+] Call log dump
+=================
+
+Date: 2017-08-15 07:20:18 +0000
+OS: Android 6.0 - Linux 3.4.0-SkyDragon-v6 (armv7l)
+Remote IP: 70.170.54.53
+Remote Port: 38514
+
+#1
+Number	: +1 702-326-9112
+Name	: Mckenna Keller Madhouse
+Date	: Mon Jul 24 20:13:54 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#2
+Number	: 13072238219
+Name	: null
+Date	: Tue Jul 25 14:31:40 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#3
+Number	: 13072270710
+Name	: null
+Date	: Tue Jul 25 15:00:11 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#4
+Number	: +18056377243
+Name	: null
+Date	: Tue Jul 25 15:42:29 PDT 2017
+Type	: OUTGOING
+Duration: 73
+
+#5
+Number	: 17024522020
+Name	: null
+Date	: Wed Jul 26 11:18:38 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#6
+Number	: 13072244697
+Name	: null
+Date	: Wed Jul 26 13:00:13 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#7
+Number	: +18056377243
+Name	: null
+Date	: Wed Jul 26 14:57:36 PDT 2017
+Type	: OUTGOING
+Duration: 84
+
+#8
+Number	: 19129991508
+Name	: null
+Date	: Thu Jul 27 08:20:40 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#9
+Number	: +18056377243
+Name	: null
+Date	: Thu Jul 27 17:55:12 PDT 2017
+Type	: OUTGOING
+Duration: 42
+
+#10
+Number	: 8463#13
+Name	: null
+Date	: Thu Jul 27 17:55:59 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#11
+Number	: +18056377243
+Name	: null
+Date	: Thu Jul 27 17:56:07 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#12
+Number	: 13072207400
+Name	: null
+Date	: Sat Jul 29 08:49:53 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#13
+Number	: 19129991508
+Name	: null
+Date	: Mon Jul 31 08:43:22 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#14
+Number	: 18555120473
+Name	: Us Bank. atm Error
+Date	: Mon Jul 31 16:26:55 PDT 2017
+Type	: OUTGOING
+Duration: 265
+
+#15
+Number	: 18882009959
+Name	: null
+Date	: Mon Jul 31 17:19:26 PDT 2017
+Type	: OUTGOING
+Duration: 69
+
+#16
+Number	: 13072244697
+Name	: null
+Date	: Tue Aug 01 11:56:38 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#17
+Number	: 18882009959
+Name	: null
+Date	: Tue Aug 01 17:33:02 PDT 2017
+Type	: OUTGOING
+Duration: 51
+
+#18
+Number	: 18555120473
+Name	: Us Bank. atm Error
+Date	: Tue Aug 01 17:36:48 PDT 2017
+Type	: OUTGOING
+Duration: 1369
+
+#19
+Number	: 15612236414
+Name	: null
+Date	: Wed Aug 02 13:09:14 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#20
+Number	: 12313372312
+Name	: null
+Date	: Thu Aug 03 07:55:31 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#21
+Number	: 12816126877
+Name	: null
+Date	: Thu Aug 03 09:09:17 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#22
+Number	: +1 702-600-2580
+Name	: Brother
+Date	: Thu Aug 03 09:52:56 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#23
+Number	: 14012008606
+Name	: null
+Date	: Thu Aug 03 11:07:18 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#24
+Number	: +18056377243
+Name	: null
+Date	: Thu Aug 03 13:50:17 PDT 2017
+Type	: OUTGOING
+Duration: 23
+
+#25
+Number	: +18056377243
+Name	: null
+Date	: Thu Aug 03 13:53:13 PDT 2017
+Type	: OUTGOING
+Duration: 28
+
+#26
+Number	: +18056377243
+Name	: null
+Date	: Thu Aug 03 13:59:02 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#27
+Number	: +18056377243
+Name	: null
+Date	: Thu Aug 03 14:02:05 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#28
+Number	: 
+Name	: null
+Date	: Thu Aug 03 14:23:59 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#29
+Number	: 
+Name	: null
+Date	: Thu Aug 03 14:24:05 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#30
+Number	: 
+Name	: null
+Date	: Thu Aug 03 14:24:09 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#31
+Number	: +18056377243
+Name	: null
+Date	: Thu Aug 03 14:24:15 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#32
+Number	: +18056377243
+Name	: null
+Date	: Thu Aug 03 14:24:18 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#33
+Number	: +18056377243
+Name	: null
+Date	: Thu Aug 03 14:24:24 PDT 2017
+Type	: OUTGOING
+Duration: 0
+
+#34
+Number	: +18056377243
+Name	: null
+Date	: Thu Aug 03 14:24:29 PDT 2017
+Type	: OUTGOING
+Duration: 26
+
+#35
+Number	: 15615361578
+Name	: null
+Date	: Fri Aug 04 08:13:25 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#36
+Number	: 13072244697
+Name	: null
+Date	: Fri Aug 04 12:01:37 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#37
+Number	: 13072201849
+Name	: null
+Date	: Sat Aug 05 08:44:03 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#38
+Number	: 13072238051
+Name	: null
+Date	: Sun Aug 06 12:29:54 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#39
+Number	: 13072244697
+Name	: null
+Date	: Tue Aug 08 08:22:22 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#40
+Number	: 13072244697
+Name	: null
+Date	: Fri Aug 11 08:26:08 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#41
+Number	: +1 702-600-2580
+Name	: Brother
+Date	: Fri Aug 11 14:19:09 PDT 2017
+Type	: INCOMING
+Duration: 58
+
+#42
+Number	: +18056377243
+Name	: null
+Date	: Fri Aug 11 16:12:25 PDT 2017
+Type	: OUTGOING
+Duration: 23
+
+#43
+Number	: +1 702-600-2580
+Name	: Brother
+Date	: Fri Aug 11 18:57:01 PDT 2017
+Type	: INCOMING
+Duration: 51
+
+#44
+Number	: +1 702-600-2580
+Name	: Brother
+Date	: Sun Aug 13 15:58:28 PDT 2017
+Type	: INCOMING
+Duration: 1042
+
+#45
+Number	: 16072030184
+Name	: null
+Date	: Mon Aug 14 08:08:32 PDT 2017
+Type	: MISSED
+Duration: 0
+
+#46
+Number	: 13072244697
+Name	: null
+Date	: Mon Aug 14 14:54:24 PDT 2017
+Type	: MISSED
+Duration: 0
+

@@ -1,0 +1,711 @@
+[1m[34m[*][0m Spooling to file test.txt...
+[4mmsf[0m [0m> use auxiliary/gather/email[K[K[K[K[K[K./[K/smtp/col[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksearch email
+[0m
+Matching Modules
+================
+
+   Name                                                    Disclosure Date  Rank       Description
+   ----                                                    ---------------  ----       -----------
+   auxiliary/admin/http/joomla_registration_privesc        2016-10-25       normal     Joomla Account Creation and Privilege Escalation
+   auxiliary/admin/http/rails_devise_pass_reset            2013-01-28       normal     Ruby on Rails Devise Authentication Password Reset
+   auxiliary/admin/http/typo3_sa_2009_002                  2009-02-10       normal     Typo3 sa-2009-002 File Disclosure
+   auxiliary/admin/http/wp_custom_contact_forms            2014-08-07       normal     WordPress custom-contact-forms Plugin SQL Upload
+   auxiliary/client/smtp/emailer                                            normal     Generic Emailer (SMTP)
+   auxiliary/docx/word_unc_injector                                         normal     Microsoft Word UNC Path Injector
+   auxiliary/gather/search_email_collector                                  normal     Search Engine Domain Email Address Collector
+   auxiliary/gather/wp_ultimate_csv_importer_user_extract  2015-02-02       normal     WordPress Ultimate CSV Importer User Table Extract
+   auxiliary/scanner/misc/dahua_dvr_auth_bypass                             normal     Dahua DVR Auth Bypass Scanner
+   auxiliary/server/capture/smb                                             normal     Authentication Capture: SMB
+   auxiliary/vsploit/pii/email_pii                                          normal     VSploit Email PII
+   encoder/generic/none                                                     normal     The "none" Encoder
+   encoder/sparc/longxor_tag                                                normal     SPARC DWORD XOR Encoder
+   encoder/x86/call4_dword_xor                                              normal     Call+4 Dword XOR Encoder
+   encoder/x86/fnstenv_mov                                                  normal     Variable-length Fnstenv/mov Dword XOR Encoder
+   encoder/x86/shikata_ga_nai                                               excellent  Polymorphic XOR Additive Feedback Encoder
+   exploit/apple_ios/email/mobilemail_libtiff              2006-08-01       good       Apple iOS MobileMail LibTIFF Buffer Overflow
+   exploit/irix/lpd/tagprinter_exec                        2001-09-01       excellent  Irix LPD tagprinter Command Execution
+   exploit/linux/pptp/poptop_negative_read                 2003-04-09       great      Poptop Negative Read Overflow
+   exploit/multi/http/vtiger_soap_upload                   2013-03-26       excellent  vTiger CRM SOAP AddEmailAttachment Arbitrary File Upload
+   exploit/multi/svn/svnserve_date                         2004-05-19       average    Subversion Date Svnserve
+   exploit/osx/email/mailapp_image_exec                    2006-03-01       manual     Mail.app Image Attachment Command Execution
+   exploit/unix/webapp/joomla_tinybrowser                  2009-07-22       excellent  Joomla 1.5.12 TinyBrowser File Upload Code Execution
+   exploit/unix/webapp/squirrelmail_pgp_plugin             2007-07-09       manual     SquirrelMail PGP Plugin Command Execution (SMTP)
+   exploit/windows/dcerpc/ms03_026_dcom                    2003-07-16       great      MS03-026 Microsoft RPC DCOM Interface Overflow
+   exploit/windows/email/ms07_017_ani_loadimage_chunksize  2007-03-28       great      Windows ANI LoadAniIcon() Chunk Size Stack Buffer Overflow (SMTP)
+   exploit/windows/email/ms10_045_outlook_ref_only         2010-06-01       excellent  Outlook ATTACH_BY_REF_ONLY File Execution
+   exploit/windows/email/ms10_045_outlook_ref_resolve      2010-06-01       excellent  Outlook ATTACH_BY_REF_RESOLVE File Execution
+   exploit/windows/fileformat/adobe_collectemailinfo       2008-02-08       good       Adobe Collab.collectEmailInfo() Buffer Overflow
+   exploit/windows/firewall/blackice_pam_icq               2004-03-18       great      ISS PAM.dll ICQ Parser Buffer Overflow
+   exploit/windows/ftp/ms09_053_ftpd_nlst                  2009-08-31       great      MS09-053 Microsoft IIS FTP Server NLST Response Overflow
+   exploit/windows/ftp/servu_mdtm                          2004-02-26       good       Serv-U FTPD MDTM Overflow
+   exploit/windows/http/icecast_header                     2004-09-28       great      Icecast Header Overwrite
+   exploit/windows/http/mdaemon_worldclient_form2raw       2003-12-29       great      MDaemon WorldClient form2raw.cgi Stack Buffer Overflow
+   exploit/windows/imap/imail_delete                       2004-11-12       average    IMail IMAP4D Delete Overflow
+   exploit/windows/misc/eureka_mail_err                    2009-10-22       normal     Eureka Email 2.2q ERR Remote Buffer Overflow
+   exploit/windows/smb/smb_relay                           2001-03-31       excellent  MS08-068 Microsoft Windows SMB Relay Code Execution
+   nop/x86/opty2                                                            normal     Opty2
+   nop/x86/single_byte                                                      normal     Single Byte
+   payload/bsdi/x86/shell_bind_tcp                                          normal     BSDi Command Shell, Bind TCP Inline
+   payload/bsdi/x86/shell_find_port                                         normal     BSDi Command Shell, Find Port Inline
+   payload/bsdi/x86/shell_reverse_tcp                                       normal     BSDi Command Shell, Reverse TCP Inline
+   payload/linux/x86/adduser                                                normal     Linux Add User
+   payload/windows/dllinject/reverse_ord_tcp                                normal     Reflective DLL Injection, Reverse Ordinal TCP Stager (No NX or Win7)
+   payload/windows/meterpreter/reverse_ord_tcp                              normal     Windows Meterpreter (Reflective Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   payload/windows/patchupdllinject/reverse_ord_tcp                         normal     Windows Inject DLL, Reverse Ordinal TCP Stager (No NX or Win7)
+   payload/windows/patchupmeterpreter/reverse_ord_tcp                       normal     Windows Meterpreter (skape/jt Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   payload/windows/shell/bind_hidden_ipknock_tcp                            normal     Windows Command Shell, Hidden Bind Ipknock TCP Stager
+   payload/windows/shell/bind_hidden_tcp                                    normal     Windows Command Shell, Hidden Bind TCP Stager
+   payload/windows/shell/bind_ipv6_tcp                                      normal     Windows Command Shell, Bind IPv6 TCP Stager (Windows x86)
+   payload/windows/shell/bind_ipv6_tcp_uuid                                 normal     Windows Command Shell, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   payload/windows/shell/bind_nonx_tcp                                      normal     Windows Command Shell, Bind TCP Stager (No NX or Win7)
+   payload/windows/shell/bind_tcp                                           normal     Windows Command Shell, Bind TCP Stager (Windows x86)
+   payload/windows/shell/bind_tcp_rc4                                       normal     Windows Command Shell, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   payload/windows/shell/bind_tcp_uuid                                      normal     Windows Command Shell, Bind TCP Stager with UUID Support (Windows x86)
+   payload/windows/shell/find_tag                                           normal     Windows Command Shell, Find Tag Ordinal Stager
+   payload/windows/shell/reverse_ipv6_tcp                                   normal     Windows Command Shell, Reverse TCP Stager (IPv6)
+   payload/windows/shell/reverse_nonx_tcp                                   normal     Windows Command Shell, Reverse TCP Stager (No NX or Win7)
+   payload/windows/shell/reverse_ord_tcp                                    normal     Windows Command Shell, Reverse Ordinal TCP Stager (No NX or Win7)
+   payload/windows/shell/reverse_tcp                                        normal     Windows Command Shell, Reverse TCP Stager
+   payload/windows/shell/reverse_tcp_allports                               normal     Windows Command Shell, Reverse All-Port TCP Stager
+   payload/windows/shell/reverse_tcp_dns                                    normal     Windows Command Shell, Reverse TCP Stager (DNS)
+   payload/windows/shell/reverse_tcp_rc4                                    normal     Windows Command Shell, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   payload/windows/shell/reverse_tcp_rc4_dns                                normal     Windows Command Shell, Reverse TCP Stager (RC4 Stage Encryption DNS, Metasm)
+   payload/windows/shell/reverse_tcp_uuid                                   normal     Windows Command Shell, Reverse TCP Stager with UUID Support
+   payload/windows/upexec/reverse_ord_tcp                                   normal     Windows Upload/Execute, Reverse Ordinal TCP Stager (No NX or Win7)
+   payload/windows/vncinject/reverse_ord_tcp                                normal     VNC Server (Reflective Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   post/multi/gather/skype_enum                                             normal     Multi Gather Skype User Data Enumeration
+   post/osx/gather/enum_keychain                                            normal     OS X Gather Keychain Enumeration
+   post/windows/gather/credentials/mdaemon_cred_collector                   excellent  Windows Gather MDaemonEmailServer Credential Cracking
+   post/windows/gather/outlook                                              normal     Windows Gather Outlook Email Messages
+
+
+[4mmsf[0m [0m> auxiliary/gather/search_email_collectorInterrupt: use the 'exit' command to quit
+[4mmsf[0m [0m> use auxiliary/gather/search_email_collector
+[0m[4mmsf[0m auxiliary([1m[31msearch_email_collector[0m) [0m> show missing 
+[0m
+Module options (auxiliary/gather/search_email_collector):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   DOMAIN                   yes       The domain name to locate email addresses for
+
+[4mmsf[0m auxiliary([1m[31msearch_email_collector[0m) [0m> \s[K[Kseg[Ktg domain google.com
+[0mdomain => google.com
+[4mmsf[0m auxiliary([1m[31msearch_email_collector[0m) [0m> show missing 
+[0m
+Module options (auxiliary/gather/search_email_collector):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+[4mmsf[0m auxiliary([1m[31msearch_email_collector[0m) [0m> advanced 
+[0m
+Module advanced options (auxiliary/gather/search_email_collector):
+
+   Name        Current Setting  Required  Description
+   ----        ---------------  --------  -----------
+   PROXY                        no        Proxy server to route connection. <host>:<port>
+   PROXY_PASS                   no        Proxy Server Password
+   PROXY_USER                   no        Proxy Server User
+   VERBOSE     false            no        Enable detailed status messages
+   WORKSPACE                    no        Specify the workspace for this module
+
+[4mmsf[0m auxiliary([1m[31msearch_email_collector[0m) [0m> options 
+[0m
+Module options (auxiliary/gather/search_email_collector):
+
+   Name           Current Setting  Required  Description
+   ----           ---------------  --------  -----------
+   DOMAIN         google.com       yes       The domain name to locate email addresses for
+   OUTFILE                         no        A filename to store the generated email list
+   SEARCH_BING    true             yes       Enable Bing as a backend search engine
+   SEARCH_GOOGLE  true             yes       Enable Google as a backend search engine
+   SEARCH_YAHOO   true             yes       Enable Yahoo! as a backend search engine
+
+[4mmsf[0m auxiliary([1m[31msearch_email_collector[0m) [0m> search ;/auxiliary[K[K[K[K[K[K[K[K[K[K[Kauxo[Kiliary/gather
+[0m
+Matching Modules
+================
+
+   Name                                                    Disclosure Date  Rank    Description
+   ----                                                    ---------------  ----    -----------
+   auxiliary/gather/advantech_webaccess_creds              2017-01-21       normal  Advantech WebAccess 8.1 Post Authentication Credential Collector
+   auxiliary/gather/alienvault_iso27001_sqli               2014-03-30       normal  AlienVault Authenticated SQL Injection Arbitrary File Read
+   auxiliary/gather/alienvault_newpolicyform_sqli          2014-05-09       normal  AlienVault Authenticated SQL Injection Arbitrary File Read
+   auxiliary/gather/android_browser_file_theft                              normal  Android Browser File Theft
+   auxiliary/gather/android_browser_new_tab_cookie_theft                    normal  Android Browser "Open in New Tab" Cookie Theft
+   auxiliary/gather/android_htmlfileprovider                                normal  Android Content Provider File Disclosure
+   auxiliary/gather/android_object_tag_webview_uxss        2014-10-04       normal  Android Open Source Platform (AOSP) Browser UXSS
+   auxiliary/gather/android_stock_browser_uxss                              normal  Android Open Source Platform (AOSP) Browser UXSS
+   auxiliary/gather/apache_rave_creds                                       normal  Apache Rave User Information Disclosure
+   auxiliary/gather/apple_safari_ftp_url_cookie_theft      2015-04-08       normal  Apple OSX/iOS/Windows Safari Non-HTTPOnly Cookie Theft
+   auxiliary/gather/apple_safari_webarchive_uxss           2013-02-22       normal  Mac OS X Safari .webarchive File Format UXSS
+   auxiliary/gather/avtech744_dvr_accounts                                  normal  AVTECH 744 DVR Account Information Retrieval
+   auxiliary/gather/browser_info                           2016-03-22       normal  HTTP Client Information Gather
+   auxiliary/gather/censys_search                                           normal  Censys Search
+   auxiliary/gather/checkpoint_hostname                    2011-12-14       normal  CheckPoint Firewall-1 SecuRemote Topology Service Hostname Disclosure
+   auxiliary/gather/citrix_published_applications                           normal  Citrix MetaFrame ICA Published Applications Scanner
+   auxiliary/gather/citrix_published_bruteforce                             normal  Citrix MetaFrame ICA Published Applications Bruteforcer
+   auxiliary/gather/coldfusion_pwd_props                   2013-05-07       normal  ColdFusion 'password.properties' Hash Extraction
+   auxiliary/gather/corpwatch_lookup_id                                     normal  CorpWatch Company ID Information Search
+   auxiliary/gather/corpwatch_lookup_name                                   normal  CorpWatch Company Name Information Search
+   auxiliary/gather/d20pass                                2012-01-19       normal  General Electric D20 Password Recovery
+   auxiliary/gather/darkcomet_filedownloader               2012-10-08       normal  DarkComet Server Remote File Download Exploit
+   auxiliary/gather/doliwamp_traversal_creds               2014-01-12       normal  DoliWamp 'jqueryFileTree.php' Traversal Gather Credentials
+   auxiliary/gather/drupal_openid_xxe                      2012-10-17       normal  Drupal OpenID External Entity Injection
+   auxiliary/gather/eaton_nsm_creds                        2012-06-26       normal  Network Shutdown Module sort_values Credential Dumper
+   auxiliary/gather/emc_cta_xxe                            2014-03-31       normal  EMC CTA v10.0 Unauthenticated XXE Arbitrary File Read
+   auxiliary/gather/enum_dns                                                normal  DNS Record Scanner and Enumerator
+   auxiliary/gather/eventlog_cred_disclosure               2014-11-05       normal  ManageEngine Eventlog Analyzer Managed Hosts Administrator Credential Disclosure
+   auxiliary/gather/external_ip                                             normal  Discover External IP via Ifconfig.me
+   auxiliary/gather/f5_bigip_cookie_disclosure                              normal  F5 BigIP Backend Cookie Disclosure
+   auxiliary/gather/firefox_pdfjs_file_theft                                normal  Firefox PDF.js Browser File Theft
+   auxiliary/gather/flash_rosetta_jsonp_url_disclosure     2014-07-08       normal  Flash "Rosetta" JSONP GET/POST Response Disclosure
+   auxiliary/gather/hp_enum_perfd                                           normal  HP Operations Manager Perfd Environment Scanner
+   auxiliary/gather/hp_snac_domain_creds                   2013-09-09       normal  HP ProCurve SNAC Domain Controller Credential Dumper
+   auxiliary/gather/huawei_wifi_info                       2013-11-11       normal  Huawei Datacard Information Disclosure Vulnerability
+   auxiliary/gather/ibm_sametime_enumerate_users           2013-12-27       normal  IBM Lotus Notes Sametime User Enumeration
+   auxiliary/gather/ibm_sametime_room_brute                2013-12-27       normal  IBM Lotus Notes Sametime Room Name Bruteforce
+   auxiliary/gather/ibm_sametime_version                   2013-12-27       normal  IBM Lotus Sametime Version Enumeration
+   auxiliary/gather/ie_sandbox_findfiles                   2016-08-09       normal  Internet Explorer Iframe Sandbox File Name Disclosure Vulnerability
+   auxiliary/gather/ie_uxss_injection                      2015-02-01       normal  MS15-018 Microsoft Internet Explorer 10 and 11 Cross-Domain JavaScript Injection
+   auxiliary/gather/impersonate_ssl                                         normal  HTTP SSL Certificate Impersonation
+   auxiliary/gather/java_rmi_registry                                       normal  Java RMI Registry Interfaces Enumeration
+   auxiliary/gather/jenkins_cred_recovery                                   normal  Jenkins Domain Credential Recovery
+   auxiliary/gather/joomla_com_realestatemanager_sqli      2015-10-22       normal  Joomla Real Estate Manager Component Error-Based SQL Injection
+   auxiliary/gather/joomla_contenthistory_sqli             2015-10-22       normal  Joomla com_contenthistory Error-Based SQL Injection
+   auxiliary/gather/joomla_weblinks_sqli                   2014-03-02       normal  Joomla weblinks-categories Unauthenticated SQL Injection Arbitrary File Read
+   auxiliary/gather/kerberos_enumusers                                      normal  Kerberos Domain User Enumeration
+   auxiliary/gather/konica_minolta_pwd_extract                              normal  Konica Minolta Password Extractor
+   auxiliary/gather/lansweeper_collector                                    normal  Lansweeper Credential Collector
+   auxiliary/gather/mantisbt_admin_sqli                    2014-02-28       normal  MantisBT Admin SQL Injection Arbitrary File Read
+   auxiliary/gather/mcafee_epo_xxe                         2015-01-06       normal  McAfee ePolicy Orchestrator Authenticated XXE Credentials Exposure
+   auxiliary/gather/memcached_extractor                                     normal  Memcached Extractor
+   auxiliary/gather/mongodb_js_inject_collection_enum      2014-06-07       normal  MongoDB NoSQL Collection Enumeration Via Injection
+   auxiliary/gather/ms14_052_xmldom                        2014-09-09       normal  MS14-052 Microsoft Internet Explorer XMLDOM Filename Disclosure
+   auxiliary/gather/mybb_db_fingerprint                    2014-02-13       normal  MyBB Database Fingerprint
+   auxiliary/gather/natpmp_external_address                                 normal  NAT-PMP External Address Scanner
+   auxiliary/gather/netgear_password_disclosure                             normal  NETGEAR Administrator Password Disclosure
+   auxiliary/gather/opennms_xxe                            2015-01-08       normal  OpenNMS Authenticated XXE
+   auxiliary/gather/qnap_backtrace_admin_hash              2017-01-31       normal  QNAP NAS/NVR Administrator Hash Disclosure
+   auxiliary/gather/safari_file_url_navigation             2014-01-16       normal  Mac OS X Safari file:// Redirection Sandbox Escape
+   auxiliary/gather/search_email_collector                                  normal  Search Engine Domain Email Address Collector
+   auxiliary/gather/searchengine_subdomains_collector                       normal  Search Engine Subdomains Collector
+   auxiliary/gather/shodan_honeyscore                                       normal  Shodan Honeyscore Client
+   auxiliary/gather/shodan_search                                           normal  Shodan Search
+   auxiliary/gather/snare_registry                                          normal  Snare Lite for Windows Registry Access
+   auxiliary/gather/solarwinds_orion_sqli                  2015-02-24       normal  Solarwinds Orion AccountManagement.asmx GetAccounts Admin Creation
+   auxiliary/gather/ssllabs_scan                                            normal  SSL Labs API Client
+   auxiliary/gather/trackit_sql_domain_creds               2014-10-07       normal  BMC / Numara Track-It! Domain Administrator and SQL Server User Password Disclosure
+   auxiliary/gather/vbulletin_vote_sqli                    2013-03-24       normal  vBulletin Password Collector via nodeid SQL Injection
+   auxiliary/gather/windows_deployment_services_shares                      normal  Microsoft Windows Deployment Services Unattend Gatherer
+   auxiliary/gather/wp_all_in_one_migration_export         2015-03-19       normal  WordPress All-in-One Migration Export
+   auxiliary/gather/wp_ultimate_csv_importer_user_extract  2015-02-02       normal  WordPress Ultimate CSV Importer User Table Extract
+   auxiliary/gather/wp_w3_total_cache_hash_extract                          normal  WordPress W3-Total-Cache Plugin 0.9.2.4 (or before) Username and Hash Extract
+   auxiliary/gather/xbmc_traversal                         2012-11-04       normal  XBMC Web Server Directory Traversal
+   auxiliary/gather/xerox_pwd_extract                                       normal  Xerox Administrator Console Password Extractor
+   auxiliary/gather/xerox_workcentre_5xxx_ldap                              normal  Xerox Workcentre 5735 LDAP Service Redential Extractor
+   auxiliary/gather/zabbix_toggleids_sqli                  2016-08-11       normal  Zabbix toggle_ids SQL Injection
+   auxiliary/gather/zoomeye_search                                          normal  ZoomEye Search
+
+
+[4mmsf[0m auxiliary([1m[31msearch_email_collector[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31msearch_email_collector[0m) [0m> use auxiliary/gather/impersonate_ssl
+[0m[4mmsf[0m auxiliary([1m[31mimpersonate_ssl[0m) [0m> show missing 
+[0m
+Module options (auxiliary/gather/impersonate_ssl):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   RHOST                   yes       The target address
+
+[4mmsf[0m auxiliary([1m[31mimpersonate_ssl[0m) [0m> set rhost google.com[C[C[Cg rhost google.com
+[0mrhost => google.com
+[4mmsf[0m auxiliary([1m[31mimpersonate_ssl[0m) [0m> run
+[0m
+[1m[34m[*][0m google.com:443 - Connecting to google.com:443
+[1m[34m[*][0m google.com:443 - Copying certificate from google.com:443
+/C=US/ST=California/L=Mountain View/O=Google Inc/CN=*.google.com 
+[1m[34m[*][0m google.com:443 - Beginning export of certificate files
+[1m[34m[*][0m google.com:443 - Creating looted key/crt/pem files for google.com:443
+[1m[32m[+][0m google.com:443 - key: /root/.msf4/loot/20170804020826_default_216.58.194.206_google.com_key_962157.key
+[1m[32m[+][0m google.com:443 - crt: /root/.msf4/loot/20170804020826_default_216.58.194.206_google.com_cert_083433.crt
+[1m[32m[+][0m google.com:443 - pem: /root/.msf4/loot/20170804020826_default_216.58.194.206_google.com_pem_645448.pem
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mimpersonate_ssl[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mimpersonate_ssl[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mimpersonate_ssl[0m) [0m> use auxiliary/gather/zoomeye_search
+[0m[4mmsf[0m auxiliary([1m[31mzoomeye_search[0m) [0m> show missing 
+[0m
+Module options (auxiliary/gather/zoomeye_search):
+
+   Name          Current Setting  Required  Description
+   ----          ---------------  --------  -----------
+   PASSWORD                       yes       The ZoomEye password
+   USERNAME                       yes       The ZoomEye username
+   ZOOMEYE_DORK                   yes       The ZoomEye Dock
+
+[4mmsf[0m auxiliary([1m[31mzoomeye_search[0m) [0m> info
+[0m
+       Name: ZoomEye Search
+     Module: auxiliary/gather/zoomeye_search
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+
+Provided by:
+  Nixawk
+
+Basic options:
+  Name          Current Setting  Required  Description
+  ----          ---------------  --------  -----------
+  MAXPAGE       1                yes       Max amount of pages to collect
+  PASSWORD                       yes       The ZoomEye password
+  RESOURCE      host             yes       ZoomEye Resource Type (Accepted: host, web)
+  USERNAME                       yes       The ZoomEye username
+  ZOOMEYE_DORK                   yes       The ZoomEye Dock
+
+Description:
+  The module use the ZoomEye API to search ZoomEye. ZoomEye is a 
+  search engine for cyberspace that lets the user find specific 
+  network components(ip, services, etc.).
+
+References:
+  https://github.com/zoomeye/SDK
+  https://www.zoomeye.org/api/doc
+  https://www.zoomeye.org/help/manual
+
+[4mmsf[0m auxiliary([1m[31mzoomeye_search[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mzoomeye_search[0m) [0m> auxiliary/gather/natpmp_external_addressuauxiliary/gather/natpmp_external_addresssauxiliary/gather/natpmp_external_addresseauxiliary/gather/natpmp_external_address auxiliary/gather/natpmp_external_address
+[0m[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> info
+[0m
+       Name: NAT-PMP External Address Scanner
+     Module: auxiliary/gather/natpmp_external_address
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+
+Provided by:
+  Jon Hart <jhart@spoofed.org>
+
+Basic options:
+  Name       Current Setting  Required  Description
+  ----       ---------------  --------  -----------
+  BATCHSIZE  256              yes       The number of hosts to probe in each set
+  CHOST                       no        The local client address
+  LIFETIME   3600000          yes       Time in ms to keep this port forwarded (set to 0 to destroy a mapping)
+  PROTOCOL   TCP              yes       Protocol to forward (Accepted: TCP, UDP)
+  RHOSTS                      yes       The target address range or CIDR identifier
+  RPORT      5351             yes       The target port (UDP)
+  THREADS    10               yes       The number of concurrent threads
+
+Description:
+  Scan NAT devices for their external address using NAT-PMP
+
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> set rhosts 70.170.54.532[K
+[0mrhosts => 70.170.54.53
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> run
+[0m
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> search aux[Kxii[Kl[Kliary/server
+[0m
+Matching Modules
+================
+
+   Name                                                  Disclosure Date  Rank    Description
+   ----                                                  ---------------  ----    -----------
+   auxiliary/docx/word_unc_injector                                       normal  Microsoft Word UNC Path Injector
+   auxiliary/scanner/sap/sap_smb_relay                                    normal  SAP SMB Relay Abuse
+   auxiliary/server/android_browsable_msf_launch                          normal  Android Meterpreter Browsable Launcher
+   auxiliary/server/android_mercury_parseuri                              normal  Android Mercury Browser Intent URI Scheme and Directory Traversal Vulnerability
+   auxiliary/server/browser_autopwn                                       normal  HTTP Client Automatic Exploiter
+   auxiliary/server/browser_autopwn                                       normal  HTTP Client Automatic Exploiter
+   auxiliary/server/browser_autopwn2                     2015-07-05       normal  HTTP Client Automatic Exploiter 2 (Browser Autopwn)
+   auxiliary/server/browser_autopwn2                     2015-07-05       normal  HTTP Client Automatic Exploiter 2 (Browser Autopwn)
+   auxiliary/server/browser_autopwn2                     2015-07-05       normal  HTTP Client Automatic Exploiter 2 (Browser Autopwn)
+   auxiliary/server/browser_autopwn2                     2015-07-05       normal  HTTP Client Automatic Exploiter 2 (Browser Autopwn)
+   auxiliary/server/capture/drda                                          normal  Authentication Capture: DRDA (DB2, Informix, Derby)
+   auxiliary/server/capture/ftp                                           normal  Authentication Capture: FTP
+   auxiliary/server/capture/http                                          normal  Authentication Capture: HTTP
+   auxiliary/server/capture/http_basic                                    normal  HTTP Client Basic Authentication Credential Collector
+   auxiliary/server/capture/http_javascript_keylogger                     normal  Capture: HTTP JavaScript Keylogger
+   auxiliary/server/capture/http_ntlm                                     normal  HTTP Client MS Credential Catcher
+   auxiliary/server/capture/imap                                          normal  Authentication Capture: IMAP
+   auxiliary/server/capture/mssql                                         normal  Authentication Capture: MSSQL
+   auxiliary/server/capture/mysql                                         normal  Authentication Capture: MySQL
+   auxiliary/server/capture/pop3                                          normal  Authentication Capture: POP3
+   auxiliary/server/capture/postgresql                                    normal  Authentication Capture: PostgreSQL
+   auxiliary/server/capture/printjob_capture                              normal  Printjob Capture Service
+   auxiliary/server/capture/sip                                           normal  Authentication Capture: SIP
+   auxiliary/server/capture/smb                                           normal  Authentication Capture: SMB
+   auxiliary/server/capture/smtp                                          normal  Authentication Capture: SMTP
+   auxiliary/server/capture/telnet                                        normal  Authentication Capture: Telnet
+   auxiliary/server/capture/vnc                                           normal  Authentication Capture: VNC
+   auxiliary/server/dhclient_bash_env                    2014-09-24       normal  DHCP Client Bash Environment Variable Code Injection (Shellshock)
+   auxiliary/server/dhcp                                                  normal  DHCP Server
+   auxiliary/server/dns/spoofhelper                                       normal  DNS Spoofing Helper Service
+   auxiliary/server/fakedns                                               normal  Fake DNS Service
+   auxiliary/server/ftp                                                   normal  FTP File Server
+   auxiliary/server/http_ntlmrelay                                        normal  HTTP Client MS Credential Relayer
+   auxiliary/server/icmp_exfil                                            normal  ICMP Exfiltration Service
+   auxiliary/server/jsse_skiptls_mitm_proxy              2015-01-20       normal  Java Secure Socket Extension (JSSE) SKIP-TLS MITM Proxy
+   auxiliary/server/local_hwbridge                                        normal  Hardware Bridge Server
+   auxiliary/server/ms15_134_mcl_leak                    2015-12-08       normal  MS15-134 Microsoft Windows Media Center MCL Information Disclosure
+   auxiliary/server/netbios_spoof_nat                    2016-06-14       normal  NetBIOS Response "BadTunnel" Brute Force Spoof (NAT Tunnel)
+   auxiliary/server/openssl_altchainsforgery_mitm_proxy  2015-07-09       normal  OpenSSL Alternative Chains Certificate Forgery MITM Proxy
+   auxiliary/server/openssl_heartbeat_client_memory      2014-04-07       normal  OpenSSL Heartbeat (Heartbleed) Client Memory Exposure
+   auxiliary/server/pxeexploit                                            normal  PXE Boot Exploit Server
+   auxiliary/server/regsvr32_command_delivery_server                      normal  Regsvr32.exe (.sct) Command Delivery Server
+   auxiliary/server/socks4a                                               normal  Socks4a Proxy Server
+   auxiliary/server/socks_unc                                             normal  SOCKS Proxy UNC Path Redirection
+   auxiliary/server/tftp                                                  normal  TFTP File Server
+   auxiliary/server/tnftp_savefile                       2014-10-28       normal  tnftp "savefile" Arbitrary Command Execution
+   auxiliary/server/webkit_xslt_dropper                                   normal  Cross Platform Webkit File Dropper
+   auxiliary/server/wget_symlink_file_write              2014-10-27       normal  GNU Wget FTP Symlink Arbitrary Filesystem Access
+   auxiliary/server/wpad                                                  normal  WPAD.dat File Server
+   auxiliary/spoof/nbns/nbns_response                                     normal  NetBIOS Name Service Spoofer
+   post/windows/gather/word_unc_injector                                  normal  Windows Gather Microsoft Office Word UNC Path Injector
+
+
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> u[Kinfo auxiliary/server/android_browsable_msf_launch
+[0m
+       Name: Android Meterpreter Browsable Launcher
+     Module: auxiliary/server/android_browsable_msf_launch
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+
+Provided by:
+  sinn3r <sinn3r@metasploit.com>
+
+Basic options:
+  Name     Current Setting  Required  Description
+  ----     ---------------  --------  -----------
+  SRVHOST  0.0.0.0          yes       The local host to listen on. This must be an address on the local machine or 0.0.0.0
+  SRVPORT  8080             yes       The local port to listen on.
+  SSL      false            no        Negotiate SSL for incoming connections
+  SSLCert                   no        Path to a custom SSL certificate (default is randomly generated)
+  URIPATH                   no        The URI to use for this exploit (default is random)
+
+Description:
+  This module allows you to open an android meterpreter via a browser. 
+  An Android meterpreter must be installed as an application 
+  beforehand on the target device in order to use this. For best 
+  results, you can consider using the auxiliary/client/sms/send_text 
+  to trick your target into opening the malicious link, and wake up 
+  Meterpreter.
+
+References:
+  http://developer.android.com/reference/android/content/Intent.html#CATEGORY_BROWSABLE
+
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> info auxiliary/server/dhcp
+[0m
+       Name: DHCP Server
+     Module: auxiliary/server/dhcp
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+
+Provided by:
+  scriptjunkie
+  apconole <apconole@yahoo.com>
+
+Available actions:
+  Name     Description
+  ----     -----------
+  Service  
+
+Basic options:
+  Name         Current Setting  Required  Description
+  ----         ---------------  --------  -----------
+  BROADCAST                     no        The broadcast address to send to
+  DHCPIPEND                     no        The last IP to give out
+  DHCPIPSTART                   no        The first IP to give out
+  DNSSERVER                     no        The DNS server IP address
+  DOMAINNAME                    no        The optional domain name to assign
+  FILENAME                      no        The optional filename of a tftp boot server
+  HOSTNAME                      no        The optional hostname to assign
+  HOSTSTART                     no        The optional host integer counter
+  NETMASK                       yes       The netmask of the local subnet
+  ROUTER                        no        The router IP address
+  SRVHOST                       yes       The IP of the DHCP server
+
+Description:
+  This module provides a DHCP service
+
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> auxiliary/server/dhcpuauxiliary/server/dhcpsauxiliary/server/dhcpeauxiliary/server/dhcp auxiliary/server/dhcpInterrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mnatpmp_external_address[0m) [0m> use auxiliary/server/fakedns
+[0m[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> iu[K[Kinfo
+[0m
+       Name: Fake DNS Service
+     Module: auxiliary/server/fakedns
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+
+Provided by:
+  ddz <ddz@theta44.org>
+  hdm <x@hdm.io>
+  fozavci
+
+Available actions:
+  Name     Description
+  ----     -----------
+  Service  
+
+Basic options:
+  Name          Current Setting  Required  Description
+  ----          ---------------  --------  -----------
+  SRVHOST       0.0.0.0          yes       The local host to listen on.
+  SRVPORT       53               yes       The local port to listen on.
+  TARGETACTION  BYPASS           yes       Action for TARGETDOMAIN (Accepted: FAKE, BYPASS)
+  TARGETDOMAIN  www.google.com   yes       The list of target domain names we want to fully resolve (BYPASS) or fake resolve (FAKE)
+  TARGETHOST                     no        The address that all names should resolve to
+
+Description:
+  This module provides a DNS service that redirects all queries to a 
+  particular address.
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> show i[K[K[K[Kow advanced 
+[0m
+Module advanced options (auxiliary/server/fakedns):
+
+   Name         Current Setting  Required  Description
+   ----         ---------------  --------  -----------
+   LogConsole   true             no        Determines whether to log all request to the console
+   LogDatabase  false            no        Determines whether to log all request to the database
+   RR_SRV_PORT  5060             no        The port field in the SRV response when FAKE
+   VERBOSE      false            no        Enable detailed status messages
+   WORKSPACE                     no        Specify the workspace for this module
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> set logdatabase true
+[0mlogdatabase => true
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> set vcer[K[Ke[K[Kerbose true
+[0mverbose => true
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> advanced 
+[0m
+Module advanced options (auxiliary/server/fakedns):
+
+   Name         Current Setting  Required  Description
+   ----         ---------------  --------  -----------
+   LogConsole   true             no        Determines whether to log all request to the console
+   LogDatabase  true             no        Determines whether to log all request to the database
+   RR_SRV_PORT  5060             no        The port field in the SRV response when FAKE
+   VERBOSE      true             no        Enable detailed status messages
+   WORKSPACE                     no        Specify the workspace for this module
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> set [K op
+[0m[1m[31m[-][0m Unknown variable
+Usage: set [option] [value]
+
+Set the given option to value.  If value is omitted, print the current value.
+If both are omitted, print options that are currently set.
+
+If run from a module context, this will set the value in the module's
+datastore.  Use -g to operate on the global datastore
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> s[Koptions 
+[0m
+Module options (auxiliary/server/fakedns):
+
+   Name          Current Setting  Required  Description
+   ----          ---------------  --------  -----------
+   SRVHOST       0.0.0.0          yes       The local host to listen on.
+   SRVPORT       53               yes       The local port to listen on.
+   TARGETACTION  BYPASS           yes       Action for TARGETDOMAIN (Accepted: FAKE, BYPASS)
+   TARGETDOMAIN  www.google.com   yes       The list of target domain names we want to fully resolve (BYPASS) or fake resolve (FAKE)
+   TARGETHOST                     no        The address that all names should resolve to
+
+
+Auxiliary action:
+
+   Name     Description
+   ----     -----------
+   Service  
+
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> set [K[K[K[Krun[K[K[K54[K[Kset targetjho[K[K[Khost 54.53.[K[K[K183.166.71
+[0mtargethost => 54.183.166.71
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> run
+[0m[1m[34m[*][0m Auxiliary module execution completed
+
+[1m[34m[*][0m DNS server initializing
+[1m[34m[*][0m DNS server started
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> ifconfgig[K[K[Kig
+[0m[1m[34m[*][0m exec: ifconfig
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 172.31.0.147  netmask 255.255.240.0  broadcast 172.31.15.255
+        inet6 fe80::497:b2ff:fe4a:38fe  prefixlen 64  scopeid 0x20<link>
+        ether 06:97:b2:4a:38:fe  txqueuelen 1000  (Ethernet)
+        RX packets 506257  bytes 72766857 (69.3 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 509090  bytes 122230970 (116.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1  (Local Loopback)
+        RX packets 3768628  bytes 1687622661 (1.5 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3768628  bytes 1687622661 (1.5 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> options 
+[0m
+Module options (auxiliary/server/fakedns):
+
+   Name          Current Setting  Required  Description
+   ----          ---------------  --------  -----------
+   SRVHOST       0.0.0.0          yes       The local host to listen on.
+   SRVPORT       53               yes       The local port to listen on.
+   TARGETACTION  BYPASS           yes       Action for TARGETDOMAIN (Accepted: FAKE, BYPASS)
+   TARGETDOMAIN  www.google.com   yes       The list of target domain names we want to fully resolve (BYPASS) or fake resolve (FAKE)
+   TARGETHOST    54.183.166.71    no        The address that all names should resolve to
+
+
+Auxiliary action:
+
+   Name     Description
+   ----     -----------
+   Service  
+
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> set targethost[Kt 54.183.166.71
+[0mtargethost => 54.183.166.71
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> run
+[0m[1m[34m[*][0m Auxiliary module execution completed
+
+[1m[34m[*][0m DNS server initializing
+[1m[34m[*][0m DNS server started
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> \opoptions [K[K[Kns 
+[0m
+Module options (auxiliary/server/fakedns):
+
+   Name          Current Setting  Required  Description
+   ----          ---------------  --------  -----------
+   SRVHOST       0.0.0.0          yes       The local host to listen on.
+   SRVPORT       53               yes       The local port to listen on.
+   TARGETACTION  BYPASS           yes       Action for TARGETDOMAIN (Accepted: FAKE, BYPASS)
+   TARGETDOMAIN  www.google.com   yes       The list of target domain names we want to fully resolve (BYPASS) or fake resolve (FAKE)
+   TARGETHOST    54.183.166.71    no        The address that all names should resolve to
+
+
+Auxiliary action:
+
+   Name     Description
+   ----     -----------
+   Service  
+
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> advanced [K[K[K[K[K[K[K[K[Kjobs
+[0m
+Jobs
+====
+
+  Id  Name                       Payload  Payload opts
+  --  ----                       -------  ------------
+  0   Auxiliary: server/fakedns           
+  1   Auxiliary: server/fakedns           
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> kiil[K[K[K[Kjobs -K
+[0mStopping all jobs...
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> jobs -K[Krun -j -z
+[0m[1m[34m[*][0m Auxiliary module running as background job
+
+[1m[34m[*][0m DNS server initializing
+[1m[34m[*][0m DNS server started
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> show[K[K[K[Kshow auxiliary [K/ser[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kuse [K[K[K[Ksearch auyx[K[Kxiliary.s[K[K/server
+[0m
+Matching Modules
+================
+
+   Name                                                  Disclosure Date  Rank    Description
+   ----                                                  ---------------  ----    -----------
+   auxiliary/docx/word_unc_injector                                       normal  Microsoft Word UNC Path Injector
+   auxiliary/scanner/sap/sap_smb_relay                                    normal  SAP SMB Relay Abuse
+   auxiliary/server/android_browsable_msf_launch                          normal  Android Meterpreter Browsable Launcher
+   auxiliary/server/android_mercury_parseuri                              normal  Android Mercury Browser Intent URI Scheme and Directory Traversal Vulnerability
+   auxiliary/server/browser_autopwn                                       normal  HTTP Client Automatic Exploiter
+   auxiliary/server/browser_autopwn                                       normal  HTTP Client Automatic Exploiter
+   auxiliary/server/browser_autopwn2                     2015-07-05       normal  HTTP Client Automatic Exploiter 2 (Browser Autopwn)
+   auxiliary/server/browser_autopwn2                     2015-07-05       normal  HTTP Client Automatic Exploiter 2 (Browser Autopwn)
+   auxiliary/server/browser_autopwn2                     2015-07-05       normal  HTTP Client Automatic Exploiter 2 (Browser Autopwn)
+   auxiliary/server/browser_autopwn2                     2015-07-05       normal  HTTP Client Automatic Exploiter 2 (Browser Autopwn)
+   auxiliary/server/capture/drda                                          normal  Authentication Capture: DRDA (DB2, Informix, Derby)
+   auxiliary/server/capture/ftp                                           normal  Authentication Capture: FTP
+   auxiliary/server/capture/http                                          normal  Authentication Capture: HTTP
+   auxiliary/server/capture/http_basic                                    normal  HTTP Client Basic Authentication Credential Collector
+   auxiliary/server/capture/http_javascript_keylogger                     normal  Capture: HTTP JavaScript Keylogger
+   auxiliary/server/capture/http_ntlm                                     normal  HTTP Client MS Credential Catcher
+   auxiliary/server/capture/imap                                          normal  Authentication Capture: IMAP
+   auxiliary/server/capture/mssql                                         normal  Authentication Capture: MSSQL
+   auxiliary/server/capture/mysql                                         normal  Authentication Capture: MySQL
+   auxiliary/server/capture/pop3                                          normal  Authentication Capture: POP3
+   auxiliary/server/capture/postgresql                                    normal  Authentication Capture: PostgreSQL
+   auxiliary/server/capture/printjob_capture                              normal  Printjob Capture Service
+   auxiliary/server/capture/sip                                           normal  Authentication Capture: SIP
+   auxiliary/server/capture/smb                                           normal  Authentication Capture: SMB
+   auxiliary/server/capture/smtp                                          normal  Authentication Capture: SMTP
+   auxiliary/server/capture/telnet                                        normal  Authentication Capture: Telnet
+   auxiliary/server/capture/vnc                                           normal  Authentication Capture: VNC
+   auxiliary/server/dhclient_bash_env                    2014-09-24       normal  DHCP Client Bash Environment Variable Code Injection (Shellshock)
+   auxiliary/server/dhcp                                                  normal  DHCP Server
+   auxiliary/server/dns/spoofhelper                                       normal  DNS Spoofing Helper Service
+   auxiliary/server/fakedns                                               normal  Fake DNS Service
+   auxiliary/server/ftp                                                   normal  FTP File Server
+   auxiliary/server/http_ntlmrelay                                        normal  HTTP Client MS Credential Relayer
+   auxiliary/server/icmp_exfil                                            normal  ICMP Exfiltration Service
+   auxiliary/server/jsse_skiptls_mitm_proxy              2015-01-20       normal  Java Secure Socket Extension (JSSE) SKIP-TLS MITM Proxy
+   auxiliary/server/local_hwbridge                                        normal  Hardware Bridge Server
+   auxiliary/server/ms15_134_mcl_leak                    2015-12-08       normal  MS15-134 Microsoft Windows Media Center MCL Information Disclosure
+   auxiliary/server/netbios_spoof_nat                    2016-06-14       normal  NetBIOS Response "BadTunnel" Brute Force Spoof (NAT Tunnel)
+   auxiliary/server/openssl_altchainsforgery_mitm_proxy  2015-07-09       normal  OpenSSL Alternative Chains Certificate Forgery MITM Proxy
+   auxiliary/server/openssl_heartbeat_client_memory      2014-04-07       normal  OpenSSL Heartbeat (Heartbleed) Client Memory Exposure
+   auxiliary/server/pxeexploit                                            normal  PXE Boot Exploit Server
+   auxiliary/server/regsvr32_command_delivery_server                      normal  Regsvr32.exe (.sct) Command Delivery Server
+   auxiliary/server/socks4a                                               normal  Socks4a Proxy Server
+   auxiliary/server/socks_unc                                             normal  SOCKS Proxy UNC Path Redirection
+   auxiliary/server/tftp                                                  normal  TFTP File Server
+   auxiliary/server/tnftp_savefile                       2014-10-28       normal  tnftp "savefile" Arbitrary Command Execution
+   auxiliary/server/webkit_xslt_dropper                                   normal  Cross Platform Webkit File Dropper
+   auxiliary/server/wget_symlink_file_write              2014-10-27       normal  GNU Wget FTP Symlink Arbitrary Filesystem Access
+   auxiliary/server/wpad                                                  normal  WPAD.dat File Server
+   auxiliary/spoof/nbns/nbns_response                                     normal  NetBIOS Name Service Spoofer
+   post/windows/gather/word_unc_injector                                  normal  Windows Gather Microsoft Office Word UNC Path Injector
+
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> run auxiliary/server/dhcp
+[0m[1m[34m[*][0m Auxiliary module execution completed
+
+[1m[34m[*][0m DNS server initializing
+[1m[34m[*][0m DNS server started
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> advanced 
+[0m
+Module advanced options (auxiliary/server/fakedns):
+
+   Name         Current Setting  Required  Description
+   ----         ---------------  --------  -----------
+   LogConsole   true             no        Determines whether to log all request to the console
+   LogDatabase  true             no        Determines whether to log all request to the database
+   RR_SRV_PORT  5060             no        The port field in the SRV response when FAKE
+   VERBOSE      true             no        Enable detailed status messages
+   WORKSPACE                     no        Specify the workspace for this module
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> jobs 
+[0m
+Jobs
+====
+
+  Id  Name                       Payload  Payload opts
+  --  ----                       -------  ------------
+  2   Auxiliary: server/fakedns           
+  3   Auxiliary: server/fakedns           
+
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> jobs -K
+[0mStopping all jobs...
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> Interrupt: use the 'exit' command to quit
+[4mmsf[0m auxiliary([1m[31mfakedns[0m) [0m> exit
+[0m
